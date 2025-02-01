@@ -19,6 +19,7 @@ app.use("/api",logisticRoutes);
 dbconnect().then(() => {
    
         console.log('El servidor está corriendo' );
+        
     
 
 }).catch(err => {
