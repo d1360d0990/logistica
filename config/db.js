@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 //Función para conectar a MongoDB
 const dbconnect = async() => {
     try {
+        //await mongoose.connect ("mongodb://localhost:27017/LogiTrack")
         await mongoose.connect (process.env.MONGODB_URI);
         console.log ('URI:', process.env.MONGODB_URI);
         console.log ('conexión a la base de datos establecida');

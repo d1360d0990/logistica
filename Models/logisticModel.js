@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
 const logisticSchema = new mongoose.Schema({
-    clienteId: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Cliente', 
-        required: true 
-      },
+
       destino: {
         type: String,
         required: true,

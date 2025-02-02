@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const modelLogistic = require('../Models/logisticModel'); // Importar el modelo de orden de logística
+const modelLogistic = require('../Models/logisticModel'); 
 
 
 // Obtener todas las Ordenes de Logística (GET)
 router.get('/', async (req, res) => {
     try {
-        const orders = await modelLogistic.find().limit(100); // Obtener todas las ordenes de logística
+        const orders = await modelLogistic.find().limit(100); 
         res.status(200).json(orders);
     } catch (error) {
         res.status(500).json({ mensaje: 'Error al obtener las ordenes', error });
