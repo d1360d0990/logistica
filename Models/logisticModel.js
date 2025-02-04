@@ -2,37 +2,39 @@ const mongoose = require("mongoose");
 
 const logisticSchema = new mongoose.Schema(
   {
-    remitente: {
+    senderName: {
       type: String,
       required: true,
     },
-    destinatario: {
+    senderPhone: {
       type: String,
       required: true,
     },
-    origen: {
+    recipientName: {
       type: String,
       required: true,
     },
-    destino: {
+    recipientPhone: {
       type: String,
       required: true,
     },
-    fechaCreacion: {
-      type: Date,
-      default: Date.now,
+    packageDescription: {
+      type: String,
+      required: true,
     },
-    fechaEntrega: {
-      type: Date,
+
+    packageWeight: {
+      type: Number,
+      required: true,
     },
-    estado: {
+    deliveryAddress: {
+      type: String,
+      required: true,
+    },
+    status: {
       type: String,
       enum: ["Pendiente", "En tránsito", "Entregado"],
-      default: "Pendiente", // Estado inicial
-      required: true,
-    },
-    detalles: {
-      type: String,
+      default: "Pendiente",
       required: true,
     },
   },
