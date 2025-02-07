@@ -18,6 +18,10 @@ const logisticSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    Date: {
+      type: Date,
+      required: true
+    },
     packageDescription: {
       type: String,
       required: true,
