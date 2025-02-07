@@ -31,12 +31,29 @@ const logisticSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    originProvince: {
+      type: String,
+      required: true,
+    },
+    originDepartment: {
+      type: String,
+      required: true,
+    },
+    destinationProvince:{
+      type: String,
+      required: true,
+    },
+    destinationDepartment: {
+      type: String,
+      required: true,
+    },
     status: {
       type: String,
       enum: ["Pendiente", "En tránsito", "Entregado"],
       default: "Pendiente",
       required: true,
     },
+
   },
   {
     timestamps: true,
