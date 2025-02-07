@@ -18,7 +18,7 @@ const logisticSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    Date: {
+    date: {
       type: Date,
       required: true
     },
